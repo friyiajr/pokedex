@@ -1,6 +1,9 @@
 mat-toolbar {
   background-color: red;
   border-radius: 0;
+  padding: 0;
+  position: fixed;
+  height: 65px;
 }
 
 a {
@@ -19,12 +22,3 @@ a:active {
   margin: 0;
 }
 
-mat-toolbar {
-  border-radius: 0;
-}
-
-@media (max-width: 959px) {
-  mat-toolbar {
-    border-radius: 0;
-  }
-}

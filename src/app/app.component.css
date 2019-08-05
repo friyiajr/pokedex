@@ -1,6 +1,7 @@
 main {
   background: url("../assets/background.jpg") no-repeat center center fixed;
   height: 100%;
+  margin-top: 65px;
 }
 
 mat-sidenav-container,
@@ -11,8 +12,4 @@ mat-sidenav {
 
 mat-sidenav {
   width: 250px;
-}
-
-main {
-  padding: 10px;
 }
