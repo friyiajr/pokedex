@@ -1,6 +1,15 @@
 import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
 import { HeaderComponent } from "./header.component";
+import {
+  MatTabsModule,
+  MatSidenavModule,
+  MatToolbarModule,
+  MatIconModule,
+  MatButtonModule,
+  MatListModule,
+  MatMenuModule
+} from "@angular/material";
 
 describe("HeaderComponent", () => {
   let component: HeaderComponent;
@@ -8,7 +17,16 @@ describe("HeaderComponent", () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [HeaderComponent]
+      declarations: [HeaderComponent],
+      imports: [
+        MatTabsModule,
+        MatSidenavModule,
+        MatToolbarModule,
+        MatIconModule,
+        MatButtonModule,
+        MatListModule,
+        MatMenuModule
+      ]
     }).compileComponents();
   }));
 
