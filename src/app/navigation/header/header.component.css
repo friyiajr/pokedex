@@ -22,3 +22,8 @@ a:active {
   margin: 0;
 }
 
+.mat-icon-button {
+  margin-left: 10px;
+  margin-right: 10px
+}
+
