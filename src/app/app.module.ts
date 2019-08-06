@@ -9,7 +9,8 @@ import { HomeComponent } from "./home/home.component";
 import { RoutingModule } from "./routing/routing.module";
 import { HeaderComponent } from "./navigation/header/header.component";
 import { SidenavListComponent } from "./navigation/sidenav-list/sidenav-list.component";
-import { InfoComponent } from './info/info.component';
+import { InfoComponent } from "./info/info.component";
+import { HttpClientModule } from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { InfoComponent } from './info/info.component';
     BrowserModule,
     BrowserAnimationsModule,
     MaterialModule,
-    RoutingModule
+    RoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
