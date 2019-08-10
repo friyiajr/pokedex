@@ -19,7 +19,7 @@ export class HomeComponent implements OnInit {
     for (let i = 1; i <= 151; i++) {
       const subscription = this.pokemonService
         .getPokemon(i)
-        .subscribe(result => {
+        .subscribe((result: Pokemon) => {
           this.pokemon.push(result);
           this.pokemon.sort((p1: Pokemon, p2: Pokemon) => {
             if (p1.id > p2.id) {
