@@ -11,6 +11,7 @@ import { HeaderComponent } from "./navigation/header/header.component";
 import { SidenavListComponent } from "./navigation/sidenav-list/sidenav-list.component";
 import { InfoComponent } from "./info/info.component";
 import { HttpClientModule } from "@angular/common/http";
+import { PokemonService } from "./pokemon/pokemon.service";
 
 @NgModule({
   declarations: [
@@ -28,7 +29,7 @@ import { HttpClientModule } from "@angular/common/http";
     RoutingModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [PokemonService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
