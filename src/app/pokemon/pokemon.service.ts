@@ -8,8 +8,8 @@ export class PokemonService {
 
   constructor(private http: HttpClient) {}
 
-  getPokemon(): Observable<Pokemon> {
-    return this.http.get(`${PokemonService.BASE_URL}/1`).pipe(
+  getPokemon(pokemonToLoad: number): Observable<Pokemon> {
+    return this.http.get(`${PokemonService.BASE_URL}/${pokemonToLoad}`).pipe(
       map(response => {
         return new Pokemon(
           response["id"],

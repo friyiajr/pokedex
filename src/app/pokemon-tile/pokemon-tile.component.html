@@ -1,7 +1,9 @@
 <div class="pokemon-tile">
-  <img class="pokemon-image" src="../../assets/background.jpg" />
+  <div class="pokemon-image-background">
+    <img class="pokemon-image" src="{{ pokemon.imageUrl }}" />
+  </div>
   <div class="pokemon-summary">
-    <p>Bulbasaur</p>
-    <p>No. 001</p>
+    <p>{{ pokemon.name.toUpperCase() }}</p>
+    <p>No. {{ pokemon.id }}</p>
   </div>
 </div>

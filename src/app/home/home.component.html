@@ -1,8 +1,5 @@
 <section fxLayout="column" fxFlexAlign="stretch">
-  <div fxFlexAlign="center">
-    <p>Welcome to the Material Angular OwnerAccount Application</p>
-  </div>
   <div class="pokemon-tile-container">
-    <app-pokemon-tile *ngFor="let n of nothing"></app-pokemon-tile>
+    <app-pokemon-tile *ngFor="let poke of pokemon" [pokemon]="poke"></app-pokemon-tile>
   </div>
 </section>

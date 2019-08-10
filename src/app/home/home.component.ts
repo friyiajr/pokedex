@@ -1,6 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { Observable } from "rxjs";
 import { PokemonService } from "../pokemon/pokemon.service";
+import { Pokemon } from "../pokemon/Pokemon";
 
 @Component({
   selector: "app-home",
@@ -8,12 +9,30 @@ import { PokemonService } from "../pokemon/pokemon.service";
   styleUrls: ["./home.component.css"]
 })
 export class HomeComponent implements OnInit {
-  nothing = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
+  pokemon: Pokemon[] = [];
 
   constructor(private pokemonService: PokemonService) {
-    this.pokemonService.getPokemon().subscribe(result => {
-      console.log(result);
-    });
+    this.getPokemon();
+  }
+
+  getPokemon(): void {
+    for (let i = 1; i <= 151; i++) {
+      const subscription = this.pokemonService
+        .getPokemon(i)
+        .subscribe(result => {
+          this.pokemon.push(result);
+          this.pokemon.sort((p1: Pokemon, p2: Pokemon) => {
+            if (p1.id > p2.id) {
+              return 1;
+            } else if (p1.id < p2.id) {
+              return -1;
+            } else {
+              return 0;
+            }
+          });
+          subscription.unsubscribe();
+        });
+    }
   }
 
   ngOnInit() {}
