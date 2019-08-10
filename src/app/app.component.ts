@@ -7,9 +7,5 @@ import { PokemonService } from "./pokemon/pokemon.service";
   styleUrls: ["./app.component.css"]
 })
 export class AppComponent {
-  constructor(private pokemonService: PokemonService) {
-    this.pokemonService.getPokemon().subscribe(result => {
-      console.log(result);
-    });
-  }
+
 }

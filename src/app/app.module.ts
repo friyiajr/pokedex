@@ -12,6 +12,8 @@ import { SidenavListComponent } from "./navigation/sidenav-list/sidenav-list.com
 import { InfoComponent } from "./info/info.component";
 import { HttpClientModule } from "@angular/common/http";
 import { PokemonService } from "./pokemon/pokemon.service";
+import { PokemonTileComponent } from "./pokemon-tile/pokemon-tile.component";
+import { CommonModule } from "@angular/common";
 
 @NgModule({
   declarations: [
@@ -20,14 +22,16 @@ import { PokemonService } from "./pokemon/pokemon.service";
     HomeComponent,
     HeaderComponent,
     SidenavListComponent,
-    InfoComponent
+    InfoComponent,
+    PokemonTileComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     MaterialModule,
     RoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    CommonModule
   ],
   providers: [PokemonService],
   bootstrap: [AppComponent]

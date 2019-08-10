@@ -1,6 +1,9 @@
+.background {
+  height: 100%;
+}
+
 main {
   background: url("../assets/background.jpg") no-repeat center center fixed;
-  height: 100%;
   margin-top: 65px;
 }
 

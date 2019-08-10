@@ -1,0 +1,25 @@
+.pokemon-tile {
+  width: 300px;
+  height: 350px;
+  background-color: rgba(255, 255, 255, 0.7);
+  margin: 5px 5px 5px 5px;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.pokemon-image {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  width: 300px;
+  height: 250px;
+  background-color: #E4E4E4;
+}
+
+p {
+  text-align: center;
+  font-size: 20px;
+}
