@@ -6,6 +6,7 @@ import { SidenavListComponent } from "./navigation/sidenav-list/sidenav-list.com
 import { HeaderComponent } from "./navigation/header/header.component";
 import { LayoutComponent } from "./layout/layout.component";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { Pokemon } from "./pokemon/Pokemon";
 
 describe("AppComponent", () => {
   beforeEach(async(() => {
