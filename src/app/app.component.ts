@@ -7,5 +7,4 @@ import { PokemonService } from "./pokemon/pokemon.service";
   styleUrls: ["./app.component.css"]
 })
 export class AppComponent {
-
 }

@@ -3,8 +3,8 @@
 }
 
 main {
-  background: url("../assets/background.jpg") no-repeat center center fixed;
   margin-top: 65px;
+  background: transparent url("../assets/background.jpg") no-repeat fixed center center;
 }
 
 mat-sidenav-container,

@@ -1,4 +1,28 @@
-p {
-  background-color: white;
+section {
   height: 100%;
+  width: 100%;
+  background-color: white;
 }
+
+.main-content {
+  display: flex;
+  justify-content: center;
+}
+
+.pokemon-image {
+  width: 200px;
+  height: 200px;
+}
+
+.image-background {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: lightgrey;
+  width: 300px;
+  height: 300px;
+  border-radius: 10px;
+  border-style: solid;
+  border-width: 1px;
+}
+
