@@ -9,6 +9,11 @@ import { HomeComponent } from "./home/home.component";
 import { RoutingModule } from "./routing/routing.module";
 import { HeaderComponent } from "./navigation/header/header.component";
 import { SidenavListComponent } from "./navigation/sidenav-list/sidenav-list.component";
+import { InfoComponent } from "./info/info.component";
+import { HttpClientModule } from "@angular/common/http";
+import { PokemonService } from "./pokemon/pokemon.service";
+import { PokemonTileComponent } from "./pokemon-tile/pokemon-tile.component";
+import { CommonModule } from "@angular/common";
 
 @NgModule({
   declarations: [
@@ -16,15 +21,19 @@ import { SidenavListComponent } from "./navigation/sidenav-list/sidenav-list.com
     LayoutComponent,
     HomeComponent,
     HeaderComponent,
-    SidenavListComponent
+    SidenavListComponent,
+    InfoComponent,
+    PokemonTileComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     MaterialModule,
-    RoutingModule
+    RoutingModule,
+    HttpClientModule,
+    CommonModule
   ],
-  providers: [],
+  providers: [PokemonService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
