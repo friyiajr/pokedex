@@ -6,7 +6,6 @@ import { Pokemon } from "../pokemon/Pokemon";
 import { PokemonTileComponent } from "../pokemon-tile/pokemon-tile.component";
 import { PokemonService } from "../pokemon/pokemon.service";
 import { HttpClientTestingModule } from "@angular/common/http/testing";
-import {Observable} from 'rxjs';
 
 describe("HomeComponent", () => {
   let component: HomeComponent;
