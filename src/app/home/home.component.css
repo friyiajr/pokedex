@@ -1,3 +1,8 @@
+section {
+  margin-top: 65px;
+  background: transparent url("../../assets/background.jpg") no-repeat fixed center center;
+}
+
 section div p {
   font-size: 30px;
 }

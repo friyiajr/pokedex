@@ -1,8 +1,5 @@
-import {
-  Component,
-  OnInit
-} from "@angular/core";
-import { ActivatedRoute} from "@angular/router";
+import { AfterViewInit, Component, OnInit } from "@angular/core";
+import { ActivatedRoute } from "@angular/router";
 import { Pokemon } from "../pokemon/Pokemon";
 import { PokemonService } from "../pokemon/pokemon.service";
 
@@ -29,10 +26,20 @@ export class InfoComponent implements OnInit {
           .getPokemonDescriptionById(pokemon.id, pokemon)
           .subscribe((result: Pokemon) => {
             this.pokemon = result;
-            console.log(this.pokemon);
             pokemonSubscription.unsubscribe();
             descriptionSubscription.unsubscribe();
           });
       });
+    this.scrollToTop();
+  }
+
+  // Used for mobile devices so that the scrolling doesn't
+  // start at a low point on the screen
+  scrollToTop(): void {
+    let top = document.getElementById("top");
+    if (top !== null) {
+      top.scrollIntoView();
+      top = null;
+    }
   }
 }
