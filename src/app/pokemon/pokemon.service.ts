@@ -4,15 +4,17 @@ import { Observable } from "rxjs";
 import { Pokemon } from "./Pokemon";
 
 export class PokemonService {
-  constructor(private http: HttpClient) {
-    this.initPokemon();
-  }
-
   static BASE_URL = "https://pokeapi.co/api/v2/pokemon";
   static CHARACTARISTIC_URL = "https://pokeapi.co/api/v2/pokemon-species";
-
   pokemon: Pokemon[] = [];
 
+  constructor(private http: HttpClient) {
+      this.initPokemon();
+  }
+
+  /*
+   * Gets the english description from JSON
+   */
   static getEnglishFlavorText(charactaristicData: any): string {
     // tslint:disable-next-line:prefer-for-of
     for (let i = 0; i < charactaristicData.length; i++) {
@@ -24,6 +26,9 @@ export class PokemonService {
     return "";
   }
 
+  /*
+   * Gets all pokemon and places them in the service
+   */
   initPokemon(): void {
     this.getAllPokemon();
   }
@@ -56,7 +61,10 @@ export class PokemonService {
     }
   }
 
-  getPokemonDescriptionById(id: string, pokemon: Pokemon) {
+  /*
+   * Gets a pokemon description from the API using the pokemon's if as a key
+   */
+  getPokemonDescriptionById(id: string, pokemon: Pokemon): Observable<Pokemon> {
     return this.http.get(`${PokemonService.CHARACTARISTIC_URL}/${id}`).pipe(
       map((characteristics: any) => {
         pokemon.description = PokemonService.getEnglishFlavorText(
@@ -67,6 +75,9 @@ export class PokemonService {
     );
   }
 
+  /*
+   * Converts the pokemon web request to a Pokemon Model
+   */
   getPokemonRequest(pokemonToLoad: string): Observable<Pokemon> {
     return this.http.get(`${PokemonService.BASE_URL}/${pokemonToLoad}`).pipe(
       map(response => {

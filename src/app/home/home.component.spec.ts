@@ -71,28 +71,4 @@ describe("HomeComponent", () => {
   it("should create", () => {
     expect(component).toBeTruthy();
   });
-
-  // describe("pokeSort", () => {
-  //   it("should return 1 if the first pokemon id is greater then the second", () => {
-  //     const p1 = new Pokemon("2", "Ivysaur", "image.com", 111, 111, ["poisin,water"], ["one", "two"], {});
-  //     const p2 = new Pokemon("1", "Bulbasaur", "image.com", 111, 111, ["poisin,water"], ["one", "two"], {});
-  //     fixture = TestBed.createComponent(HomeComponent);
-  //     const sortResult: number = fixture.componentInstance.pokeSort(p1, p2);
-  //     expect(sortResult).toEqual(1);
-  //   });
-  //   it("should return 0 if the first pokemon id equal to the second", () => {
-  //     const p1 = new Pokemon("1", "Bulbasaur", "image.com", 111, 111, ["poisin,water"], ["one", "two"], {});
-  //     const p2 = new Pokemon("1", "Bulbasaur", "image.com", 111, 111, ["poisin,water"], ["one", "two"], {});
-  //     fixture = TestBed.createComponent(HomeComponent);
-  //     const sortResult: number = fixture.componentInstance.pokeSort(p1, p2);
-  //     expect(sortResult).toEqual(0);
-  //   });
-  //   it("should return -1 if the second pokemon id is greater then the first", () => {
-  //     const p1 = new Pokemon("2", "Ivysaur", "image.com");
-  //     const p2 = new Pokemon("1", "Bulbasaur", "image.com");
-  //     fixture = TestBed.createComponent(HomeComponent);
-  //     const sortResult: number = fixture.componentInstance.pokeSort(p2, p1);
-  //     expect(sortResult).toEqual(-1);
-  //   });
-  // });
 });
