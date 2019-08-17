@@ -14,6 +14,7 @@ import { HttpClientModule } from "@angular/common/http";
 import { PokemonService } from "./pokemon/pokemon.service";
 import { PokemonTileComponent } from "./pokemon-tile/pokemon-tile.component";
 import { CommonModule } from "@angular/common";
+import { CreditsPageComponent } from './credits-page/credits-page.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { CommonModule } from "@angular/common";
     HeaderComponent,
     SidenavListComponent,
     InfoComponent,
-    PokemonTileComponent
+    PokemonTileComponent,
+    CreditsPageComponent
   ],
   imports: [
     BrowserModule,

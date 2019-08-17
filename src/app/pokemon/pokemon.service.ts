@@ -53,6 +53,7 @@ export class PokemonService {
     for (let i = 1; i <= 151; i++) {
       const statsSubscription = this.getPokemonRequest(i.toString()).subscribe(
         (result: Pokemon) => {
+
           this.pokemon.push(result);
           this.pokemon.sort(this.pokeSort);
           statsSubscription.unsubscribe();

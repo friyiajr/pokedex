@@ -1,0 +1,29 @@
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 100%;
+}
+
+div {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  width: 75%;
+  border-radius: 10px;
+  border-width: 1px;
+  border-style: solid;
+  padding: 30px;
+
+}
+
+p {
+
+  text-align: center;
+}
