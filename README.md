@@ -5,7 +5,7 @@ This project is a Pokedex designed to show information about the original 151 Po
 ## Setup Instructions
 1) Clone the repo
 2) Run `npm install`
-3) Type `npm serve`
+3) Type `ng serve`
 4) Go to `localhost:4200`
 
 ## Run the unit tests
