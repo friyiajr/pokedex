@@ -1,6 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { PokemonService } from "../pokemon/pokemon.service";
 import { Pokemon } from "../pokemon/Pokemon";
+import { Router } from "@angular/router";
 
 @Component({
   selector: "app-home",
@@ -10,35 +11,12 @@ import { Pokemon } from "../pokemon/Pokemon";
 export class HomeComponent implements OnInit {
   pokemon: Pokemon[] = [];
 
-  constructor(private pokemonService: PokemonService) {
-    this.getPokemon();
+  constructor(private pokemonService: PokemonService, private router: Router) {
+    this.pokemon = pokemonService.pokemon;
   }
 
-  /*
-   * Sorts pokemon in order by id
-   */
-  pokeSort(p1: Pokemon, p2: Pokemon): number {
-    if (p1.id > p2.id) {
-      return 1;
-    } else if (p1.id < p2.id) {
-      return -1;
-    } else {
-      return 0;
-    }
-  }
-  /*
-   * Retrieves 151 Pokemon from the Pokemon API
-   */
-  getPokemon(): void {
-    for (let i = 1; i <= 151; i++) {
-      const subscription = this.pokemonService
-        .getPokemon(i)
-        .subscribe((result: Pokemon) => {
-          this.pokemon.push(result);
-          this.pokemon.sort(this.pokeSort);
-          subscription.unsubscribe();
-        });
-    }
+  onPokemonSelected(pokemonId: number) {
+    this.router.navigate(["info", pokemonId]);
   }
 
   ngOnInit() {}

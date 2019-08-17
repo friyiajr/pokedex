@@ -1,5 +1,9 @@
 <section fxLayout="column" fxFlexAlign="stretch">
   <div class="pokemon-tile-container">
-    <app-pokemon-tile *ngFor="let poke of pokemon" [pokemon]="poke"></app-pokemon-tile>
+    <app-pokemon-tile
+      *ngFor="let poke of pokemon; let i = index"
+      [pokemon]="poke"
+      (click)="onPokemonSelected(i + 1)"
+    ></app-pokemon-tile>
   </div>
 </section>

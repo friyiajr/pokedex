@@ -1,1 +1,70 @@
-<p>info works!</p>
+<section>
+  <div class="main-content">
+    <div id="top"></div>
+    <div class="header-background"></div>
+    <div class="header">
+      <h1 class="pokemon-name">{{ pokemon?.name.toUpperCase() }}</h1>
+      <h2 class="pokemon-number">No. {{ pokemon?.id }}</h2>
+    </div>
+    <div class="row">
+      <div class="image-background">
+        <img class="pokemon-image" src="{{ pokemon?.imageUrl }}" />
+      </div>
+      <div class="fact-background">
+        <p class="poke-fact">{{ pokemon?.description }}</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="fact-background">
+        <table class="poke-fact-small-table">
+          <tr>
+            <td class="row-title">Type:</td>
+            <td class="row-content">
+              {{ pokemon?.types.toString().toUpperCase() }}
+            </td>
+          </tr>
+          <tr>
+            <td class="row-title">Height:</td>
+            <td class="row-content">{{ pokemon?.height }}"</td>
+          </tr>
+          <tr>
+            <td class="row-title">Weight:</td>
+            <td class="row-content">{{ pokemon?.weight }}</td>
+          </tr>
+        </table>
+      </div>
+      <div class="image-background">
+        <table class="poke-fact-small-table">
+          <tr>
+            <td class="row-title">Speed:</td>
+            <td class="row-content">{{ (pokemon?.stats)["speed"] }}</td>
+          </tr>
+          <tr>
+            <td class="row-title">Special Atk:</td>
+            <td class="row-content">
+              {{ (pokemon?.stats)["special_attack"] }}
+            </td>
+          </tr>
+          <tr>
+            <td class="row-title">Special Def:</td>
+            <td class="row-content">
+              {{ (pokemon?.stats)["special_defence"] }}
+            </td>
+          </tr>
+          <tr>
+            <td class="row-title">Defence:</td>
+            <td class="row-content">{{ (pokemon?.stats)["defense"] }}</td>
+          </tr>
+          <tr>
+            <td class="row-title">Attack:</td>
+            <td class="row-content">{{ (pokemon?.stats)["attack"] }}</td>
+          </tr>
+          <tr>
+            <td class="row-title">HP:</td>
+            <td class="row-content">{{ (pokemon?.stats)["hp"] }}</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
